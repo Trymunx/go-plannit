@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"time"
 )
 
-type todo struct {
+// Todo is out basic todo struct
+type Todo struct {
 	id          int
 	title       string
 	description string
@@ -18,15 +18,5 @@ type todo struct {
 	complete    bool
 }
 
-func main() {
-	todo1 := todo{
-		id:          0,
-		title:       "Finish writing todo structs in go",
-		description: "",
-		priority:    1,
-		created:     time.Now(),
-		complete:    false,
-		estlength:   60000000000,
-	}
-	fmt.Println(todo1.title)
-}
+// Todos should store all of our todos
+type Todos []Todo
